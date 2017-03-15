@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux指令学习," />
 
 
 
@@ -87,19 +87,31 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="du ：disk usage
+查看文件以及文件夹的大小。是通过搜索文件来计算每个文件的大小然后累加，du能看到的文件只是一些当前存在的，没有被删除的。他计算的大小就是当前他认为存在的所有文件大小的累加和。
+命令格式du [选项][文件]
+命令功能​    显示每个文件和目录的磁盘使用空间。
+命令参数-a或-all  显示目录中个别文件的大小。   
+-b或-bytes  显示目录或文件大小时，以b">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/07/09/hello-world/index.html">
+<meta property="og:title" content="Linux 命令 du">
+<meta property="og:url" content="http://yoursite.com/2017/03/11/Linux-cmd-du/index.html">
 <meta property="og:site_name" content="ZJD's blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-03-11T02:55:30.000Z">
+<meta property="og:description" content="du ：disk usage
+查看文件以及文件夹的大小。是通过搜索文件来计算每个文件的大小然后累加，du能看到的文件只是一些当前存在的，没有被删除的。他计算的大小就是当前他认为存在的所有文件大小的累加和。
+命令格式du [选项][文件]
+命令功能​    显示每个文件和目录的磁盘使用空间。
+命令参数-a或-all  显示目录中个别文件的大小。   
+-b或-bytes  显示目录或文件大小时，以b">
+<meta property="og:updated_time" content="2017-03-11T03:12:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Linux 命令 du">
+<meta name="twitter:description" content="du ：disk usage
+查看文件以及文件夹的大小。是通过搜索文件来计算每个文件的大小然后累加，du能看到的文件只是一些当前存在的，没有被删除的。他计算的大小就是当前他认为存在的所有文件大小的累加和。
+命令格式du [选项][文件]
+命令功能​    显示每个文件和目录的磁盘使用空间。
+命令参数-a或-all  显示目录中个别文件的大小。   
+-b或-bytes  显示目录或文件大小时，以b">
 
 
 
@@ -127,13 +139,13 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/09/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/11/Linux-cmd-du/"/>
 
 
 
 
 
-  <title> Hello World | ZJD's blog </title>
+  <title> Linux 命令 du | ZJD's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +264,7 @@ Quick">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/09/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/11/Linux-cmd-du/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhu Jindong">
@@ -273,7 +285,7 @@ Quick">
             
             
               
-                Hello World
+                Linux 命令 du
               
             
           </h1>
@@ -288,8 +300,8 @@ Quick">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-09T19:40:41+08:00">
-                2016-07-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-11T10:12:14+08:00">
+                2017-03-11
               </time>
             
 
@@ -324,15 +336,32 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>du ：disk usage</p>
+<p>查看文件以及文件夹的大小。是通过搜索文件来计算每个文件的大小然后累加，du能看到的文件只是一些当前存在的，没有被删除的。他计算的大小就是当前他认为存在的所有文件大小的累加和。</p>
+<h4 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h4><p>du [选项][文件]</p>
+<h4 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h4><p>​    显示每个文件和目录的磁盘使用空间。</p>
+<h4 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h4><p>-a或-all  显示目录中个别文件的大小。   </p>
+<p>-b或-bytes  显示目录或文件大小时，以byte为单位。   </p>
+<p>-c或–total  除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和。 </p>
+<p>-k或–kilobytes  以KB(1024bytes)为单位输出。</p>
+<p>-m或–megabytes  以MB为单位输出。   </p>
+<p>-s或–summarize  仅显示总计，只列出最后加总的值。</p>
+<p>-h或–human-readable  以K，M，G为单位，提高信息的可读性。</p>
+<p>-x或–one-file-xystem  以一开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过。 </p>
+<p>-L&lt;符号链接&gt;或–dereference&lt;符号链接&gt; 显示选项中所指定符号链接的源文件大小。   </p>
+<p>-S或–separate-dirs   显示个别目录的大小时，并不含其子目录的大小。 </p>
+<p>-X&lt;文件&gt;或–exclude-from=&lt;文件&gt;  在&lt;文件&gt;指定目录或文件。   </p>
+<p>–exclude=&lt;目录或文件&gt;         略过指定的目录或文件。    </p>
+<p>-D或–dereference-args   显示指定符号链接的源文件大小。   </p>
+<p>-H或–si  与-h参数相同，但是K，M，G是以1000为换算单位。   </p>
+<p>-l或–count-links   重复计算硬件链接的文件</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><h5 id="显示目录或者文件所占的空间"><a href="#显示目录或者文件所占的空间" class="headerlink" title="显示目录或者文件所占的空间"></a>显示目录或者文件所占的空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du</div><div class="line">40	./_posts</div><div class="line">40	.</div></pre></td></tr></table></figure>
+<p>只显示当前目录下面的子目录的目录大小和当前目录的总的大小，最下面的40为当前目录的总大小</p>
+<h5 id="显示指定文件所占的空间"><a href="#显示指定文件所占的空间" class="headerlink" title="显示指定文件所占的空间"></a>显示指定文件所占的空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du ./_posts/hello-world.md</div><div class="line">8	./_posts/hello-world.md</div></pre></td></tr></table></figure>
+<h5 id="显示指定目录的占用空间"><a href="#显示指定目录的占用空间" class="headerlink" title="显示指定目录的占用空间"></a>显示指定目录的占用空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du ./_posts/</div><div class="line">40	./_posts/</div></pre></td></tr></table></figure>
+<h5 id="显式总和大小"><a href="#显式总和大小" class="headerlink" title="显式总和大小"></a>显式总和大小</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du <span class="_">-s</span></div></pre></td></tr></table></figure>
+<h5 id="方便阅读格式"><a href="#方便阅读格式" class="headerlink" title="方便阅读格式"></a>方便阅读格式</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -h</div></pre></td></tr></table></figure>
+<h5 id="指定遍历深度"><a href="#指定遍历深度" class="headerlink" title="指定遍历深度"></a>指定遍历深度</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -h --max-depth=1</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -354,6 +383,12 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Linux指令学习/" rel="tag"># Linux指令学习</a>
+          
+        </div>
+      
 
       
         
@@ -363,14 +398,18 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/03/11/Linux-study-secureCRT/" rel="next" title="secureCRT使用退格键（backspace）出现^H解决办法">
+                <i class="fa fa-chevron-left"></i> secureCRT使用退格键（backspace）出现^H解决办法
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/09/use-hexo-create-blog/" rel="prev" title="use hexo create blog">
-                use hexo create blog <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/11/Linux-cmd-df/" rel="prev" title="Linux 命令 df">
+                Linux 命令 df <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -491,7 +530,7 @@ Quick">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#命令格式"><span class="nav-number">1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命令功能"><span class="nav-number">2.</span> <span class="nav-text">命令功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命令参数"><span class="nav-number">3.</span> <span class="nav-text">命令参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例"><span class="nav-number">4.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#显示目录或者文件所占的空间"><span class="nav-number">4.1.</span> <span class="nav-text">显示目录或者文件所占的空间</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#显示指定文件所占的空间"><span class="nav-number">4.2.</span> <span class="nav-text">显示指定文件所占的空间</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#显示指定目录的占用空间"><span class="nav-number">4.3.</span> <span class="nav-text">显示指定目录的占用空间</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#显式总和大小"><span class="nav-number">4.4.</span> <span class="nav-text">显式总和大小</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方便阅读格式"><span class="nav-number">4.5.</span> <span class="nav-text">方便阅读格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#指定遍历深度"><span class="nav-number">4.6.</span> <span class="nav-text">指定遍历深度</span></a></li></ol></li></ol></div>
             
 
           </div>
