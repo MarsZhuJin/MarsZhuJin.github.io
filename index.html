@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
 
     <!--[if lt IE 9]>
@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -106,6 +106,13 @@
         
 
         
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
 
 
         
@@ -137,13 +144,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜單</li>
-                        <li>標籤</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>友情鏈接</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>關於我</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -255,7 +262,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
   
@@ -376,404 +383,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言基础/">C语言基础</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Linux-study-ssh" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/11/Linux-study-ssh/" class="article-date">
-      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/11/Linux-study-ssh/">Linux 远程ssh连接速度慢原因</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>一般是因为远程端开启了DNS 服务。</p>
-<p>在被连接端 </p>
-<p>编辑 /etc/ssh/sshd_config 文件</p>
-<p>找到 “UseDNS” 设置为no</p>
-<p>重启ssh服务</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux学习/">Linux学习</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Linux-cmd-rpm" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/11/Linux-cmd-rpm/" class="article-date">
-      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/11/Linux-cmd-rpm/">Linux 包管理软件 rpm</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>常用命令组合</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">-ivh：安装显示安装进度--install--verbose--hash</div><div class="line">-Uvh：升级软件包--Update；</div><div class="line">-qpl：列出RPM软件包内的文件信息[Query Package list]；</div><div class="line">-qpi：列出RPM软件包的描述信息[Query Package install package(s)]；</div><div class="line">-qf：查找指定文件属于哪个RPM软件包[Query File]；</div><div class="line">-Va：校验所有的RPM软件包，查找丢失的文件[View Lost]；</div><div class="line">-e：删除包</div><div class="line">-qa：</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux指令学习/">Linux指令学习</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Linux-cmd-scp" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/11/Linux-cmd-scp/" class="article-date">
-      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/11/Linux-cmd-scp/">Linux 命令 scp</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Linux scp命令用于Linux主机之间文件或者目录复制。<br>scp是 secure copy的缩写, scp是linux系统下基于ssh登陆进行安全的远程文件拷贝命令。</p>
-<p>使用scp命令要确保用户具有远程文件的相应权限，否则无法起作用。</p>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">scp -rp /path/filename username@remoteIP:/path #将本地文件拷贝到服务器上</div><div class="line">scp -rp username@remoteIP:/path/filename /path #将远程文件从服务器下载到本地</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux指令学习/">Linux指令学习</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Linux-study-mongodb" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/11/Linux-study-mongodb/" class="article-date">
-      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/11/Linux-study-mongodb/">mongodb shell无法删除</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>利用SecureCRT工具访问linux的时候，在使用MongoDB的交互式shell的时候，退格键（Backspace）无法使用，导致无法修改输入的字符。为这个错误，废了好长时间的力气，终于找到了错误的原因。其实，主要是SecureCRT工具默认的字符输入模式的问题，可以通过以下方式修改：</p>
-<p>第一步：选择Option菜单中的Session Option。</p>
-<p>第二步：在左侧的目录中选择Terminal—Emulation，在其中的Terminal选项中选择Linux，并点击确定即可。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/secureCRT-mongodb/">secureCRT mongodb</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Linux-cmd-du" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/11/Linux-cmd-du/" class="article-date">
-      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/11/Linux-cmd-du/">Linux 命令 du</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>du ：disk usage</p>
-<p>查看文件以及文件夹的大小。是通过搜索文件来计算每个文件的大小然后累加，du能看到的文件只是一些当前存在的，没有被删除的。他计算的大小就是当前他认为存在的所有文件大小的累加和。</p>
-<h4 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h4><p>du [选项][文件]</p>
-<h4 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h4><p>​    显示每个文件和目录的磁盘使用空间。</p>
-<h4 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h4><p>-a或-all  显示目录中个别文件的大小。   </p>
-<p>-b或-bytes  显示目录或文件大小时，以byte为单位。   </p>
-<p>-c或–total  除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和。 </p>
-<p>-k或–kilobytes  以KB(1024bytes)为单位输出。</p>
-<p>-m或–megabytes  以MB为单位输出。   </p>
-<p>-s或–summarize  仅显示总计，只列出最后加总的值。</p>
-<p>-h或–human-readable  以K，M，G为单位，提高信息的可读性。</p>
-<p>-x或–one-file-xystem  以一开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过。 </p>
-<p>-L&lt;符号链接&gt;或–dereference&lt;符号链接&gt; 显示选项中所指定符号链接的源文件大小。   </p>
-<p>-S或–separate-dirs   显示个别目录的大小时，并不含其子目录的大小。 </p>
-<p>-X&lt;文件&gt;或–exclude-from=&lt;文件&gt;  在&lt;文件&gt;指定目录或文件。   </p>
-<p>–exclude=&lt;目录或文件&gt;         略过指定的目录或文件。    </p>
-<p>-D或–dereference-args   显示指定符号链接的源文件大小。   </p>
-<p>-H或–si  与-h参数相同，但是K，M，G是以1000为换算单位。   </p>
-<p>-l或–count-links   重复计算硬件链接的文件</p>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><h5 id="显示目录或者文件所占的空间"><a href="#显示目录或者文件所占的空间" class="headerlink" title="显示目录或者文件所占的空间"></a>显示目录或者文件所占的空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du</div><div class="line">40	./_posts</div><div class="line">40	.</div></pre></td></tr></table></figure>
-<p>只显示当前目录下面的子目录的目录大小和当前目录的总的大小，最下面的40为当前目录的总大小</p>
-<h5 id="显示指定文件所占的空间"><a href="#显示指定文件所占的空间" class="headerlink" title="显示指定文件所占的空间"></a>显示指定文件所占的空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du ./_posts/hello-world.md</div><div class="line">8	./_posts/hello-world.md</div></pre></td></tr></table></figure>
-<h5 id="显示指定目录的占用空间"><a href="#显示指定目录的占用空间" class="headerlink" title="显示指定目录的占用空间"></a>显示指定目录的占用空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du ./_posts/</div><div class="line">40	./_posts/</div></pre></td></tr></table></figure>
-<h5 id="显式总和大小"><a href="#显式总和大小" class="headerlink" title="显式总和大小"></a>显式总和大小</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du <span class="_">-s</span></div></pre></td></tr></table></figure>
-<h5 id="方便阅读格式"><a href="#方便阅读格式" class="headerlink" title="方便阅读格式"></a>方便阅读格式</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -h</div></pre></td></tr></table></figure>
-<h5 id="指定遍历深度"><a href="#指定遍历深度" class="headerlink" title="指定遍历深度"></a>指定遍历深度</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -h --max-depth=1</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux指令学习/">Linux指令学习</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Linux-study-secureCRT" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/11/Linux-study-secureCRT/" class="article-date">
-      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/11/Linux-study-secureCRT/">secureCRT使用退格键（backspace）出现^H解决办法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>解决办法步骤如下：</p>
-<p>选项-&gt;会话选项-&gt;终端-&gt;仿真-&gt;映射键</p>
-<p>Backspace发送delete(B)</p>
-<p>Delete 发送backplane(S)</p>
-<p>打上钩就行了</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux学习/">Linux学习</a></li></ul>
     </div>
 
       
@@ -935,6 +544,401 @@
 
 
   
+    <article id="post-Linux-cmd-scp" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/11/Linux-cmd-scp/" class="article-date">
+      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/11/Linux-cmd-scp/">Linux 命令 scp</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Linux scp命令用于Linux主机之间文件或者目录复制。<br>scp是 secure copy的缩写, scp是linux系统下基于ssh登陆进行安全的远程文件拷贝命令。</p>
+<p>使用scp命令要确保用户具有远程文件的相应权限，否则无法起作用。</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">scp -rp /path/filename username@remoteIP:/path #将本地文件拷贝到服务器上</div><div class="line">scp -rp username@remoteIP:/path/filename /path #将远程文件从服务器下载到本地</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux指令学习/">Linux指令学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Linux-study-mongodb" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/11/Linux-study-mongodb/" class="article-date">
+      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/11/Linux-study-mongodb/">mongodb shell无法删除</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>利用SecureCRT工具访问linux的时候，在使用MongoDB的交互式shell的时候，退格键（Backspace）无法使用，导致无法修改输入的字符。为这个错误，废了好长时间的力气，终于找到了错误的原因。其实，主要是SecureCRT工具默认的字符输入模式的问题，可以通过以下方式修改：</p>
+<p>第一步：选择Option菜单中的Session Option。</p>
+<p>第二步：在左侧的目录中选择Terminal—Emulation，在其中的Terminal选项中选择Linux，并点击确定即可。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/secureCRT-mongodb/">secureCRT mongodb</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Linux-cmd-rpm" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/11/Linux-cmd-rpm/" class="article-date">
+      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/11/Linux-cmd-rpm/">Linux 包管理软件 rpm</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>常用命令组合</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">-ivh：安装显示安装进度--install--verbose--hash</div><div class="line">-Uvh：升级软件包--Update；</div><div class="line">-qpl：列出RPM软件包内的文件信息[Query Package list]；</div><div class="line">-qpi：列出RPM软件包的描述信息[Query Package install package(s)]；</div><div class="line">-qf：查找指定文件属于哪个RPM软件包[Query File]；</div><div class="line">-Va：校验所有的RPM软件包，查找丢失的文件[View Lost]；</div><div class="line">-e：删除包</div><div class="line">-qa：</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux指令学习/">Linux指令学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Linux-cmd-mount" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/11/Linux-cmd-mount/" class="article-date">
+      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/11/Linux-cmd-mount/">磁盘挂载与卸除</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Linux 的磁盘挂载使用 <code>mount</code> 命令，卸载使用 <code>umount</code> 命令。</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mount [-t 文件系统] [-L Label名] [-o 额外选项] [-n]  装置文件名  挂载点</div><div class="line">umount [-fn] 装置文件名或挂载点</div><div class="line"></div><div class="line">mount      设备名 或者 挂载点 或者挂载点 + 设备名 </div><div class="line">umount     设备名 或者 挂载点 或者挂载点 + 设备名</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux指令学习/">Linux指令学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Linux-study-secureCRT" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/11/Linux-study-secureCRT/" class="article-date">
+      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/11/Linux-study-secureCRT/">secureCRT使用退格键（backspace）出现^H解决办法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>解决办法步骤如下：</p>
+<p>选项-&gt;会话选项-&gt;终端-&gt;仿真-&gt;映射键</p>
+<p>Backspace发送delete(B)</p>
+<p>Delete 发送backplane(S)</p>
+<p>打上钩就行了</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux学习/">Linux学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Linux-cmd-du" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/11/Linux-cmd-du/" class="article-date">
+      <time datetime="2017-03-11T02:12:14.000Z" itemprop="datePublished">2017-03-11</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/11/Linux-cmd-du/">Linux 命令 du</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>du ：disk usage</p>
+<p>查看文件以及文件夹的大小。是通过搜索文件来计算每个文件的大小然后累加，du能看到的文件只是一些当前存在的，没有被删除的。他计算的大小就是当前他认为存在的所有文件大小的累加和。</p>
+<h4 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h4><p>du [选项][文件]</p>
+<h4 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h4><p>​    显示每个文件和目录的磁盘使用空间。</p>
+<h4 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h4><p>-a或-all  显示目录中个别文件的大小。   </p>
+<p>-b或-bytes  显示目录或文件大小时，以byte为单位。   </p>
+<p>-c或–total  除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和。 </p>
+<p>-k或–kilobytes  以KB(1024bytes)为单位输出。</p>
+<p>-m或–megabytes  以MB为单位输出。   </p>
+<p>-s或–summarize  仅显示总计，只列出最后加总的值。</p>
+<p>-h或–human-readable  以K，M，G为单位，提高信息的可读性。</p>
+<p>-x或–one-file-xystem  以一开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过。 </p>
+<p>-L&lt;符号链接&gt;或–dereference&lt;符号链接&gt; 显示选项中所指定符号链接的源文件大小。   </p>
+<p>-S或–separate-dirs   显示个别目录的大小时，并不含其子目录的大小。 </p>
+<p>-X&lt;文件&gt;或–exclude-from=&lt;文件&gt;  在&lt;文件&gt;指定目录或文件。   </p>
+<p>–exclude=&lt;目录或文件&gt;         略过指定的目录或文件。    </p>
+<p>-D或–dereference-args   显示指定符号链接的源文件大小。   </p>
+<p>-H或–si  与-h参数相同，但是K，M，G是以1000为换算单位。   </p>
+<p>-l或–count-links   重复计算硬件链接的文件</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><h5 id="显示目录或者文件所占的空间"><a href="#显示目录或者文件所占的空间" class="headerlink" title="显示目录或者文件所占的空间"></a>显示目录或者文件所占的空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du</div><div class="line">40	./_posts</div><div class="line">40	.</div></pre></td></tr></table></figure>
+<p>只显示当前目录下面的子目录的目录大小和当前目录的总的大小，最下面的40为当前目录的总大小</p>
+<h5 id="显示指定文件所占的空间"><a href="#显示指定文件所占的空间" class="headerlink" title="显示指定文件所占的空间"></a>显示指定文件所占的空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du ./_posts/hello-world.md</div><div class="line">8	./_posts/hello-world.md</div></pre></td></tr></table></figure>
+<h5 id="显示指定目录的占用空间"><a href="#显示指定目录的占用空间" class="headerlink" title="显示指定目录的占用空间"></a>显示指定目录的占用空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du ./_posts/</div><div class="line">40	./_posts/</div></pre></td></tr></table></figure>
+<h5 id="显式总和大小"><a href="#显式总和大小" class="headerlink" title="显式总和大小"></a>显式总和大小</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du <span class="_">-s</span></div></pre></td></tr></table></figure>
+<h5 id="方便阅读格式"><a href="#方便阅读格式" class="headerlink" title="方便阅读格式"></a>方便阅读格式</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -h</div></pre></td></tr></table></figure>
+<h5 id="指定遍历深度"><a href="#指定遍历深度" class="headerlink" title="指定遍历深度"></a>指定遍历深度</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -h --max-depth=1</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux指令学习/">Linux指令学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -949,14 +953,14 @@
                 2016-2017 Zhu Jindong
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、簡潔且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄博客主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -965,7 +969,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -998,9 +1002,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
