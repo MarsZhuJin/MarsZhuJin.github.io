@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[problem_mac_ssh]]></title>
+      <title><![CDATA[Mac下管理ssh连接的方法]]></title>
       <url>http://yoursite.com/2017/03/26/problem-mac-ssh/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
@@ -114,18 +114,16 @@
     </entry>
     
     <entry>
-      <title><![CDATA[SecureCRT使用退格键（backspace）出现^H解决办法]]></title>
-      <url>http://yoursite.com/2017/03/11/Linux-study-secureCRT/</url>
+      <title><![CDATA[mongodb shell无法删除]]></title>
+      <url>http://yoursite.com/2017/03/11/Linux-study-mongodb/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
 
 <a id="more"></a>
 <the rest="" of="" contents="">
 
-<p>解决办法步骤如下：</p>
-<p>选项-&gt;会话选项-&gt;终端-&gt;仿真-&gt;映射键</p>
-<p>Backspace发送delete(B)</p>
-<p>Delete 发送backplane(S)</p>
-<p>打上钩就行了</p>
+<p>利用SecureCRT工具访问linux的时候，在使用MongoDB的交互式shell的时候，退格键（Backspace）无法使用，导致无法修改输入的字符。为这个错误，废了好长时间的力气，终于找到了错误的原因。其实，主要是SecureCRT工具默认的字符输入模式的问题，可以通过以下方式修改：</p>
+<p>第一步：选择Option菜单中的Session Option。</p>
+<p>第二步：在左侧的目录中选择Terminal—Emulation，在其中的Terminal选项中选择Linux，并点击确定即可。</p>
 </the></excerpt>]]></content>
       
         <categories>
@@ -139,9 +137,7 @@
             
             <tag> SecureCRT </tag>
             
-            <tag> Linux学习 </tag>
-            
-            <tag> 问题解决 </tag>
+            <tag> mongodb </tag>
             
         </tags>
         
@@ -203,57 +199,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Linux 命令 du]]></title>
-      <url>http://yoursite.com/2017/03/11/Linux-cmd-du/</url>
-      <content type="html"><![CDATA[ <excerpt in="" index="" |="" 首页摘要="">
-
-<a id="more"></a>
-<the rest="" of="" contents="">
-
-<p>du ：disk usage</p>
-<p>查看文件以及文件夹的大小。是通过搜索文件来计算每个文件的大小然后累加，du能看到的文件只是一些当前存在的，没有被删除的。他计算的大小就是当前他认为存在的所有文件大小的累加和。</p>
-<h4 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h4><p>du [选项][文件]</p>
-<h4 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h4><p>​    显示每个文件和目录的磁盘使用空间。</p>
-<h4 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h4><p>-a或-all  显示目录中个别文件的大小。   </p>
-<p>-b或-bytes  显示目录或文件大小时，以byte为单位。   </p>
-<p>-c或–total  除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和。 </p>
-<p>-k或–kilobytes  以KB(1024bytes)为单位输出。</p>
-<p>-m或–megabytes  以MB为单位输出。   </p>
-<p>-s或–summarize  仅显示总计，只列出最后加总的值。</p>
-<p>-h或–human-readable  以K，M，G为单位，提高信息的可读性。</p>
-<p>-x或–one-file-xystem  以一开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过。 </p>
-<p>-L&lt;符号链接&gt;或–dereference&lt;符号链接&gt; 显示选项中所指定符号链接的源文件大小。   </p>
-<p>-S或–separate-dirs   显示个别目录的大小时，并不含其子目录的大小。 </p>
-<p>-X&lt;文件&gt;或–exclude-from=&lt;文件&gt;  在&lt;文件&gt;指定目录或文件。   </p>
-<p>–exclude=&lt;目录或文件&gt;         略过指定的目录或文件。    </p>
-<p>-D或–dereference-args   显示指定符号链接的源文件大小。   </p>
-<p>-H或–si  与-h参数相同，但是K，M，G是以1000为换算单位。   </p>
-<p>-l或–count-links   重复计算硬件链接的文件</p>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><h5 id="显示目录或者文件所占的空间"><a href="#显示目录或者文件所占的空间" class="headerlink" title="显示目录或者文件所占的空间"></a>显示目录或者文件所占的空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du</div><div class="line">40	./_posts</div><div class="line">40	.</div></pre></td></tr></table></figure>
-<p>只显示当前目录下面的子目录的目录大小和当前目录的总的大小，最下面的40为当前目录的总大小</p>
-<h5 id="显示指定文件所占的空间"><a href="#显示指定文件所占的空间" class="headerlink" title="显示指定文件所占的空间"></a>显示指定文件所占的空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du ./_posts/hello-world.md</div><div class="line">8	./_posts/hello-world.md</div></pre></td></tr></table></figure>
-<h5 id="显示指定目录的占用空间"><a href="#显示指定目录的占用空间" class="headerlink" title="显示指定目录的占用空间"></a>显示指定目录的占用空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du ./_posts/</div><div class="line">40	./_posts/</div></pre></td></tr></table></figure>
-<h5 id="显式总和大小"><a href="#显式总和大小" class="headerlink" title="显式总和大小"></a>显式总和大小</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du <span class="_">-s</span></div></pre></td></tr></table></figure>
-<h5 id="方便阅读格式"><a href="#方便阅读格式" class="headerlink" title="方便阅读格式"></a>方便阅读格式</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -h</div></pre></td></tr></table></figure>
-<h5 id="指定遍历深度"><a href="#指定遍历深度" class="headerlink" title="指定遍历深度"></a>指定遍历深度</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -h --max-depth=1</div></pre></td></tr></table></figure>
-</the></excerpt>]]></content>
-      
-        <categories>
-            
-            <category> Linux指令 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Linux指令 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[磁盘挂载与卸除]]></title>
       <url>http://yoursite.com/2017/03/11/Linux-cmd-mount/</url>
       <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
@@ -275,6 +220,40 @@
         <tags>
             
             <tag> Linux指令 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[SecureCRT使用退格键（backspace）出现^H解决办法]]></title>
+      <url>http://yoursite.com/2017/03/11/Linux-study-secureCRT/</url>
+      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
+
+<a id="more"></a>
+<the rest="" of="" contents="">
+
+<p>解决办法步骤如下：</p>
+<p>选项-&gt;会话选项-&gt;终端-&gt;仿真-&gt;映射键</p>
+<p>Backspace发送delete(B)</p>
+<p>Delete 发送backplane(S)</p>
+<p>打上钩就行了</p>
+</the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> Linux学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Linux学习 </tag>
+            
+            <tag> SecureCRT </tag>
+            
+            <tag> 问题解决 </tag>
             
         </tags>
         
@@ -313,36 +292,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[mongodb shell无法删除]]></title>
-      <url>http://yoursite.com/2017/03/11/Linux-study-mongodb/</url>
-      <content type="html"><![CDATA[<excerpt in="" index="" |="" 首页摘要="">
-
-<a id="more"></a>
-<the rest="" of="" contents="">
-
-<p>利用SecureCRT工具访问linux的时候，在使用MongoDB的交互式shell的时候，退格键（Backspace）无法使用，导致无法修改输入的字符。为这个错误，废了好长时间的力气，终于找到了错误的原因。其实，主要是SecureCRT工具默认的字符输入模式的问题，可以通过以下方式修改：</p>
-<p>第一步：选择Option菜单中的Session Option。</p>
-<p>第二步：在左侧的目录中选择Terminal—Emulation，在其中的Terminal选项中选择Linux，并点击确定即可。</p>
-</the></excerpt>]]></content>
-      
-        <categories>
-            
-            <category> Linux学习 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> SecureCRT </tag>
-            
-            <tag> mongodb </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Linux 命令 df]]></title>
       <url>http://yoursite.com/2017/03/11/Linux-cmd-df/</url>
       <content type="html"><![CDATA[ <excerpt in="" index="" |="" 首页摘要="">
@@ -372,6 +321,57 @@
 <p>–version 显示版本信息</p>
 <h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><h5 id="显示文件系统的磁盘使用情况统计"><a href="#显示文件系统的磁盘使用情况统计" class="headerlink" title="显示文件系统的磁盘使用情况统计"></a>显示文件系统的磁盘使用情况统计</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Jindong:~ jindong$ df </div><div class="line"></div><div class="line">Filesystem      Size   Used  Avail Capacity  iused   ifree %iused  Mounted on</div><div class="line">/dev/disk1     233Gi  219Gi   13Gi    95% 57599742 3383682   94%   /</div><div class="line">devfs          180Ki  180Ki    0Bi   100%      624       0  100%   /dev</div><div class="line">map -hosts       0Bi    0Bi    0Bi   100%        0       0  100%   /net</div><div class="line">map auto_home    0Bi    0Bi    0Bi   100%        0       0  100%   /home</div></pre></td></tr></table></figure>
 <h4 id="使用-h便于读"><a href="#使用-h便于读" class="headerlink" title="使用-h便于读"></a>使用-h便于读</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Jindong:~ jindong$ df -h</div><div class="line">Filesystem      Size   Used  Avail Capacity  iused   ifree %iused  Mounted on</div><div class="line">/dev/disk1     233Gi  219Gi   13Gi    95% 57603543 3379881   94%   /</div><div class="line">devfs          180Ki  180Ki    0Bi   100%      624       0  100%   /dev</div><div class="line">map -hosts       0Bi    0Bi    0Bi   100%        0       0  100%   /net</div><div class="line">map auto_home    0Bi    0Bi    0Bi   100%        0       0  100%   /home</div></pre></td></tr></table></figure>
+</the></excerpt>]]></content>
+      
+        <categories>
+            
+            <category> Linux指令 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Linux指令 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Linux 命令 du]]></title>
+      <url>http://yoursite.com/2017/03/11/Linux-cmd-du/</url>
+      <content type="html"><![CDATA[ <excerpt in="" index="" |="" 首页摘要="">
+
+<a id="more"></a>
+<the rest="" of="" contents="">
+
+<p>du ：disk usage</p>
+<p>查看文件以及文件夹的大小。是通过搜索文件来计算每个文件的大小然后累加，du能看到的文件只是一些当前存在的，没有被删除的。他计算的大小就是当前他认为存在的所有文件大小的累加和。</p>
+<h4 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h4><p>du [选项][文件]</p>
+<h4 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h4><p>​    显示每个文件和目录的磁盘使用空间。</p>
+<h4 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h4><p>-a或-all  显示目录中个别文件的大小。   </p>
+<p>-b或-bytes  显示目录或文件大小时，以byte为单位。   </p>
+<p>-c或–total  除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和。 </p>
+<p>-k或–kilobytes  以KB(1024bytes)为单位输出。</p>
+<p>-m或–megabytes  以MB为单位输出。   </p>
+<p>-s或–summarize  仅显示总计，只列出最后加总的值。</p>
+<p>-h或–human-readable  以K，M，G为单位，提高信息的可读性。</p>
+<p>-x或–one-file-xystem  以一开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过。 </p>
+<p>-L&lt;符号链接&gt;或–dereference&lt;符号链接&gt; 显示选项中所指定符号链接的源文件大小。   </p>
+<p>-S或–separate-dirs   显示个别目录的大小时，并不含其子目录的大小。 </p>
+<p>-X&lt;文件&gt;或–exclude-from=&lt;文件&gt;  在&lt;文件&gt;指定目录或文件。   </p>
+<p>–exclude=&lt;目录或文件&gt;         略过指定的目录或文件。    </p>
+<p>-D或–dereference-args   显示指定符号链接的源文件大小。   </p>
+<p>-H或–si  与-h参数相同，但是K，M，G是以1000为换算单位。   </p>
+<p>-l或–count-links   重复计算硬件链接的文件</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><h5 id="显示目录或者文件所占的空间"><a href="#显示目录或者文件所占的空间" class="headerlink" title="显示目录或者文件所占的空间"></a>显示目录或者文件所占的空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du</div><div class="line">40	./_posts</div><div class="line">40	.</div></pre></td></tr></table></figure>
+<p>只显示当前目录下面的子目录的目录大小和当前目录的总的大小，最下面的40为当前目录的总大小</p>
+<h5 id="显示指定文件所占的空间"><a href="#显示指定文件所占的空间" class="headerlink" title="显示指定文件所占的空间"></a>显示指定文件所占的空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du ./_posts/hello-world.md</div><div class="line">8	./_posts/hello-world.md</div></pre></td></tr></table></figure>
+<h5 id="显示指定目录的占用空间"><a href="#显示指定目录的占用空间" class="headerlink" title="显示指定目录的占用空间"></a>显示指定目录的占用空间</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Jindong:<span class="built_in">source</span> jindong$ du ./_posts/</div><div class="line">40	./_posts/</div></pre></td></tr></table></figure>
+<h5 id="显式总和大小"><a href="#显式总和大小" class="headerlink" title="显式总和大小"></a>显式总和大小</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du <span class="_">-s</span></div></pre></td></tr></table></figure>
+<h5 id="方便阅读格式"><a href="#方便阅读格式" class="headerlink" title="方便阅读格式"></a>方便阅读格式</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -h</div></pre></td></tr></table></figure>
+<h5 id="指定遍历深度"><a href="#指定遍历深度" class="headerlink" title="指定遍历深度"></a>指定遍历深度</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -h --max-depth=1</div></pre></td></tr></table></figure>
 </the></excerpt>]]></content>
       
         <categories>
@@ -448,13 +448,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[tags]]></title>
-      <url>http://yoursite.com/tags/index.html</url>
-      <content type="html"><![CDATA[<p>分类 标签</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[about]]></title>
       <url>http://yoursite.com/about/index.html</url>
       <content type="html"></content>
@@ -464,6 +457,13 @@
       <title><![CDATA[categories]]></title>
       <url>http://yoursite.com/categories/index.html</url>
       <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[tags]]></title>
+      <url>http://yoursite.com/tags/index.html</url>
+      <content type="html"><![CDATA[<p>分类 标签</p>
+]]></content>
     </entry>
     
   
